@@ -3,11 +3,11 @@ function Ship(port) {
   this.currentPort = port;
 }
 
-Ship.prototype.setSail = () => {
-  this.currentPort = !true;
+Ship.prototype.setSail = function setSail() {
+  this.currentPort = false;
 };
 
-Ship.prototype.dock = (port) => {
+Ship.prototype.dock = function dock(port) {
   this.currentPort = port;
 };
 
