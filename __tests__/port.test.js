@@ -6,28 +6,28 @@ it('can be instantiated', () => {
   });
 
 it('Port has a name property', () => {
-    const port = new Port('Dover');
-    expect(port.name).toBe('Dover');
+    const dover = new Port('Dover');
+    expect(dover.name).toBe('Dover');
   });
 
 it('addShip', () => {
-    const port = new Port('Dover');
+    const dover = new Port('Dover');
     const ship = {};
 
-    port.addShip(ship);
+    dover.addShip(ship);
 
-    expect(port.ships).toContain(ship);
+    expect(dover.ships).toContain(ship);
   });
 
 it('removeShip', () => {
-    const port = new Port('Dover');
-    const ship = {};
-    const ship1 = {};
+    const dover = new Port('Dover');
+    const ship = { name: 'ship 0' };
+    const ship1 = { name: 'ship 1' };
 
-    port.addShip(ship);
-    port.addShip(ship1);
-    port.removeShip(ship1);
+    dover.addShip(ship);
+    dover.addShip(ship1);
+    dover.removeShip(ship1);
 
-    expect(port.ships).toEqual([ship]);
+    expect(dover.ships).toEqual([ship]);
   });
 });
