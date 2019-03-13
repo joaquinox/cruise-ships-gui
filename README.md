@@ -20,7 +20,7 @@ For this project, you will need to clone this repository and navigate into your 
 
 * To install Jest, run ```npm install -D jest```
 
-In your package.json file, change the "test" script to "jest". 
+In your package.json file, change the ```test``` script to ```jest``` (or ```jest --coverage``` for test coverage). 
 
 * To run tests, run ```npm test```
 
