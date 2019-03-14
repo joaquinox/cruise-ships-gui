@@ -17,21 +17,21 @@ describe('Port', () => {
     ship1 = { name: 'ship 1' };
   });
 
-it('can be instantiated', () => {
+  it('can be instantiated', () => {
     expect(new Port()).toBeInstanceOf(Object);
   });
 
-it('Port has a name property', () => {
+  it('Port has a name property', () => {
     expect(dover.name).toBe('Dover');
   });
 
-it('addShip', () => {
+  it('addShip', () => {
     dover.addShip(ship);
 
     expect(dover.ships).toContain(ship);
   });
 
-it('removeShip', () => {
+  it('removeShip', () => {
     dover.addShip(ship);
     dover.addShip(ship1);
     dover.removeShip(ship1);
