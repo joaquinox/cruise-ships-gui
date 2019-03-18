@@ -1,20 +1,14 @@
 const Port = require('../src/port.js');
-const Ship = require('../src/ship.js');
-const Itinerary = require('../src/itinerary.js');
 
 describe('Port', () => {
-  let ship;
-  let ship1;
+  let titanic;
+  let mayflower;
   let dover;
-  let calais;
-  let itinerary;
 
   beforeEach(() => {
     dover = new Port('Dover');
-    calais = new Port('Calais');
-    itinerary = new Itinerary([dover, calais]);
-    ship = { name: 'ship 0' };
-    ship1 = { name: 'ship 1' };
+    titanic = { name: 'ship 0' };
+    mayflower = { name: 'ship 1' };
   });
 
   it('can be instantiated', () => {
@@ -26,16 +20,16 @@ describe('Port', () => {
   });
 
   it('addShip', () => {
-    dover.addShip(ship);
+    dover.addShip(titanic);
 
-    expect(dover.ships).toContain(ship);
+    expect(dover.ships).toContain(titanic);
   });
 
   it('removeShip', () => {
-    dover.addShip(ship);
-    dover.addShip(ship1);
-    dover.removeShip(ship1);
+    dover.addShip(titanic);
+    dover.addShip(mayflower);
+    dover.removeShip(mayflower);
 
-    expect(dover.ships).toEqual([ship]);
+    expect(dover.ships).toEqual([titanic]);
   });
 });
