@@ -1,6 +1,6 @@
 ## :ship: Cruise Ships :ship:
 
-A project to further our understanding of Object Oriented Programming by taking a journey on a cruise ship! 
+A project to further our understanding of Object Oriented Programming.
 
 ## Built With
 
@@ -14,15 +14,15 @@ A project to further our understanding of Object Oriented Programming by taking 
 
 ## Installation
 
-For this project, you will need to clone this repository and navigate into your local directory. 
+Clone this repository and navigate into your local directory. 
 
 * Initialise NPM project from your terminal using the command ```npm init```.
 
-* To install Jest, run ```npm install -D jest```
+* To install Jest as a devDependecy, run ```npm install -D jest```
 
 In your package.json file, change the ```test``` script to ```jest``` (or ```jest --coverage``` for test coverage). 
 
-* To run tests, run ```npm test```
+* To run tests: ```npm test```
 
 ## Author
 
@@ -30,4 +30,4 @@ Sam Jones
 
 ## Acknowledgments
 
-* @MCRCodes
+* [Manchester Codes](https://github.com/MCRcodes)
