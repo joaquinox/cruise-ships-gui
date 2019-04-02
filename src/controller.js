@@ -1,6 +1,7 @@
 (function exportController() {
   function Controller() {
     this.initialiseSea();
+    // this.renderPorts(ports);
   }
 
   Controller.prototype = {
@@ -14,6 +15,10 @@
         document.querySelector('#viewport').style.backgroundImage = `url('${backgrounds[backgroundIndex % backgrounds.length]}')`;
         backgroundIndex += 1;
       }, 1000);
+      renderPorts(ports) {
+        const portsElement = document.querySelector('#ports');
+        portsElement.style.width = '0px';
+      };
     },
   };
 

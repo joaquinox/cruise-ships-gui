@@ -10,12 +10,21 @@
 </head>
 <body class="container">
   <div id="viewport">
+    <div id="ports">
 
+    </div>
   </div>
   <script src='src/controller.js'></script>
   <script src='src/port.js'></script>
+  <script src='src/itinerary.js'></script>
   <script>
     const controller = new Controller();
+    const itinerary = new Itinerary([
+      new Port('Dover'),
+      new Port('Calais'),
+      new Port('Antwerp'),
+      new Port('Amsterdam'),
+    ]);
   </script>
 </body>
 </html>
