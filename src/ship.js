@@ -25,6 +25,6 @@
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = Ship;
   } else {
-    window.Port = Ship;
+    window.Ship = Ship;
   }
 }());
