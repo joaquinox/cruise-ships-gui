@@ -28,6 +28,13 @@ body {
   background-image: url('../images/port.png');
 }
 
+#ship {
+  position: absolute;
+  background-image: url('../images/ship.png');
+  width: 128px;
+  height: 64px;
+}
+
 .container {
   display: flex;
   align-content: center;
