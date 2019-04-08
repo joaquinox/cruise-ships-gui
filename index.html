@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
   <title>Cruise Ships</title>
 </head>
 <body class="container">
   <div id="viewport">
+    <button id="sailbutton">Set Sail!</button>
     <div id="ports">
 
     </div>
@@ -20,17 +22,18 @@
   <script src='src/controller.js'></script>
   <script src='src/port.js'></script>
   <script src='src/itinerary.js'></script>
+  <script src='src/ship.js'></script>
   <script>
-    const controller = new Controller();
     const itinerary = new Itinerary([
       new Port('Dover'),
       new Port('Calais'),
       new Port('Antwerp'),
       new Port('Amsterdam'),
     ]);
+    const ship = new Ship(itinerary);
+    const controller = new Controller(ship);
     controller.renderPorts(itinerary.ports);
-    const titanic = new Ship(itinerary);
-    controller.renderShip(titanic);
+    controller.renderShip(ship);
   </script>
 </body>
 </html>
